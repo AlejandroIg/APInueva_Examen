@@ -24,8 +24,12 @@ class Producto(models.Model):
 
 
 class Vendedor(models.Model):
-    id = models.AutoField(primary_key=True)
-    nombre = models.CharField(max_length=60)
+    username = models.CharField(primary_key=True, max_length=30, default='')
+    correo = models.CharField(max_length=100, default='')
+    password = models.CharField(max_length=40, default='')
+
+    def __str__(self):
+        return self.username
 
 
 class Tienda(models.Model):
@@ -34,6 +38,6 @@ class Tienda(models.Model):
     ciudad = models.CharField(max_length=50)
     comuna = models.CharField(max_length=50)
     telefono = models.CharField(max_length=50)
-    correo = models.CharField(max_length=100)
-    encargado = models.ForeignKey(
-        Vendedor, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.nombre

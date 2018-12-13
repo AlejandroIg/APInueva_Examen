@@ -18,4 +18,4 @@ class TiendaSerializer (serializers.HyperlinkedModelSerializer):
 class VendedorSerializer (serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Vendedor
-        fields = ('id', 'nombre')
+        fields = ('username', 'correo', 'password')
