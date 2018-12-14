@@ -12,7 +12,7 @@ class TiendaSerializer (serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Tienda
         fields = ('nombre', 'direccion', 'ciudad', 'comuna',
-                  'telefono', 'correo', 'encargado')
+                  'telefono')
 
 
 class VendedorSerializer (serializers.HyperlinkedModelSerializer):

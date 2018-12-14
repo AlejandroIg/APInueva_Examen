@@ -9,7 +9,7 @@ class ProductoViewSet (viewsets.ModelViewSet):
 
 
 class VendedorViewSet (viewsets.ModelViewSet):
-    queryset = Vendedor.objects.all().order_by('nombre')
+    queryset = Vendedor.objects.all().order_by('username')
     serializer_class = VendedorSerializer
 
 
